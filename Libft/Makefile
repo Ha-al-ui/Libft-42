@@ -10,10 +10,11 @@
 #                                                                              #
 # **************************************************************************** #
 
+NAME = libft.a
+
 SRCS = ft_memset.c		\
 		ft_bzero.c		\
 		ft_memcpy.c		\
-		ft_memccpy.c		\
 		ft_memmove.c 	\
 		ft_memchr.c		\
 		ft_memcmp.c		\
@@ -39,11 +40,13 @@ SRCS = ft_memset.c		\
 		ft_strtrim.c		\
 		ft_split.c		\
 		ft_itoa.c		\
-		# ft_strmapi.c		\
-		# ft_putchar_fd.c	\
-		# ft_putstr_fd.c	\
-		# ft_putendl_fd.c	\
-		# ft_putnbr_fd.c
+# 		ft_strmapi.c		\
+# 		ft_putchar_fd.c	\
+# 		ft_putstr_fd.c	\
+# 		ft_putendl_fd.c	\
+# 		ft_putnbr_fd.c
+
+OBJS			= $(SRCS:.c=.o)
 
 # SRCSB =	ft_lstnew.c			\
 # 		ft_lstadd_front.c	\
@@ -56,38 +59,29 @@ SRCS = ft_memset.c		\
 # 		ft_lstmap.c			\
 # 		$(SRCS)
 
-NAME = libft.a
 
-# OBJS_DIR = objs/
-# OBJS = $(SRCS:.c=.o)
-# OBJECTS_PREFIXED = $(addprefix $(OBJS_DIR), $(OBJS))
+BONUS_OBJS		= $(BONUS:.c=.o)
 
-# OBJSB = $(SRCSB:.c=.o)
-# OBJECTS_BONUS_PREFIXED = $(addprefix $(OBJS_DIR), $(OBJSB))
+CC				= gcc
+RM				= rm -f
+CFLAGS			= -Wall -Wextra -Werror -I.
 
-CC = clang
+NAME			= libft.a
 
-CC_FLAGS = -Wall -Wextra -Werror
+all:			$(NAME)
 
-# $(OBJS_DIR)%.o : %.c libft.h
-# 	@mkdir -p $(OBJS_DIR)
-# 	@echo "Compiling: $<"
-# 	@clang $(CC_FLAGS) -c $< -o $@
-
-# $(NAME): $(OBJECTS_PREFIXED)
-# 	@ar r $(NAME) $(OBJECTS_PREFIXED)
-# 	@echo "Libft Done !"
-
-all: $(NAME)
+$(NAME):		$(OBJS)
+				ar rcs $(NAME) $(OBJS)
 
 clean:
-	rm -rf $(OBJS_DIR)
+				$(RM) $(OBJS) $(BONUS_OBJS)
 
-fclean: clean
-	rm -f $(NAME)
+fclean:			clean
+				$(RM) $(NAME)
 
-re: fclean all
+re:				fclean $(NAME)
 
-# bonus: $(OBJECTS_BONUS_PREFIXED)
-# 	@ar r $(NAME) $(OBJECTS_BONUS_PREFIXED)
-# 	@echo "Libft Bonus Done !"
+# bonus:			$(OBJS) $(BONUS_OBJS)
+# 				ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+
+# .PHONY:			all clean fclean re bonus
