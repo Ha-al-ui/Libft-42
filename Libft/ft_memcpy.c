@@ -18,10 +18,13 @@ void    *ft_memcpy(void *dst, const void *src, size_t len)
 	char	*d;
 	const char	*s;
 
+	if(len == 0)
+      return (dst);
+	if (!dst && !src)
+        return (0);
 	d = (char *)dst;
 	s = (const char *)src;
 	i = 0;
-
 	while(len)
 	{
 		d[i] = s[i];
@@ -30,3 +33,10 @@ void    *ft_memcpy(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
+// int main()
+// {
+//   char s1[] = "0";
+//   char s2[] = "0";
+//   ft_memcpy(s1, s2, 2);
+//   printf("%s", s1);
+// }

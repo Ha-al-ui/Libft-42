@@ -14,7 +14,6 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	size_t		i;
 	void		*p;
 
 	p = malloc(count * size);
@@ -23,3 +22,14 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_bzero(p, count * size);
 	return (p);
 }
+// int main()
+// {
+// 	char *p = ft_calloc(5,5);
+// 	int i;
+// 	i = 0;
+// 	while(i < 5)
+// 	{
+// 		printf("%d\n",p[i]);
+// 		i++;
+// 	}
+// }

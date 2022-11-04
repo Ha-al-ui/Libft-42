@@ -12,27 +12,33 @@
 
 #include "libft.h"
 
-int ft_atoi(const char *str)
+int		ft_atoi(const char *str)
 {
-	int	i;
-	int	s;
-	int	rst;
+	int c;
+	int s;
+	int res;
 
-	i = 0;
+	c = 0;
 	s = 1;
-	rst = 0;
-
-	while((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
-		i++;
-	if(str[i] == '-' || str[i] == '+')
+	res = 0;
+	while (str[c] == ' ' || str[c] == '\n' || str[c] == '\t' ||
+			str[c] == '\v' || str[c] == '\f' || str[c] == '\r')
+		c++;
+	if (str[c] == '-' || str[c] == '+')
 	{
-		if (str[i] == '-')
-			s*= -1;
+		if (str[c] == '-')
+			s = -1;
+		c++;
 	}
-	while(str[i] >= '0' && str[i] <= '9')
+	while (str[c] >= '0' && str[c] <= '9')
 	{
-		rst = rst * 10 + (str[i] - 48);
-		i++;
+		res = (res * 10) + (str[c] - '0');
+		c++;
 	}
-	return (rst * s);
+	return (res * s);
 }
+// int main()
+// {
+// 	char s[] = "	 -15245";
+// 	printf("%d", ft_atoi(s));
+// }

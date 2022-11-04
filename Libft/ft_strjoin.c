@@ -16,6 +16,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	len;
 	char	*s0;
 
+	if (!s1 || !s2)
+		return (NULL);
 	len = ft_strlen(s1) + ft_strlen(s2) + 1;
 	s0 = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2)));
 	if (s0 == 0)
@@ -27,3 +29,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	return ((char *)s0);
 }
+// int main()
+// {
+// 	char s [] = "vlsdkjl";
+// 	char s1 = NULL;
+// 	printf("%s", ft_strjoin(s, s1));
+// }
