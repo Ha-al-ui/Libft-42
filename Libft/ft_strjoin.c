@@ -13,25 +13,33 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	len;
-	char	*s0;
+	int		i;
+	int		j;
+	char	*str;
 
 	if (!s1 || !s2)
 		return (NULL);
-	len = ft_strlen(s1) + ft_strlen(s2) + 1;
-	s0 = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2)));
-	if (s0 == 0)
-		return (0);
-	else
+	i = 0;
+	j = 0;
+	str = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (str == NULL)
+		return (NULL);
+	while (s1[i] != '\0')
 	{
-		ft_memcpy (s0, s1, len);
-		ft_strlcat (s0, s2, len);
+		str[i] = s1[i];
+		i++;
 	}
-	return ((char *)s0);
+	while (s2[j] != '\0')
+	{
+		str[i + j] = s2[j];
+		j++;
+	}
+	str[i + j] = '\0';
+	return (str);
 }
-// int main()
-// {
-// 	char s [] = "vlsdkjl";
-// 	char s1 = NULL;
-// 	printf("%s", ft_strjoin(s, s1));
-// }
+int main()
+{
+	char s [] = "vlsdkjl";
+	char s1[]  = " hjjjk";
+	printf("%s", ft_strjoin(s, s1));
+}

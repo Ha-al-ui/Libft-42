@@ -12,45 +12,53 @@
 
 #include "libft.h"
 
-int ft_trlen(int i)
-{ 
-  int len = 0;
-    if( i == 0)
-  {
-    len++;
-  }
-  if(i < 0)
-  {
-    i *= -1;
-    len++;
-  }
-  while(i > 0)
-  {
-    i /= 10;
-    len++;
-  }
-return(len); 
-}
-char *ft_itoa(int n)
+static char	*check_first(int n)
 {
-  int index = ft_trlen(n);
-  char *p = malloc(sizeof(char) * ft_trlen(n) + 1);
-  
-  if (n == 0)
-{
-  p[0] = '0';
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	if (n == 0)
+		return (ft_strdup("0"));
+	return (NULL);
 }
-  if(n < 0)
-  {
-    p[0] = '-';
-    n *= - 1;
-  }
-  p[index--] = '\0';
-  while(n > 0)
-  {
-    p[index] = (n % 10) + 48;
-    n = n / 10;
-    index--;
-  }
-return p;    
+
+static int	ft_counter(int n)
+{
+	int	counter;
+
+	counter = 0;
+	if (n < 0)
+	{
+		counter++;
+		n *= (-1);
+	}
+	while (n > 0)
+	{
+		n /= 10;
+		counter++;
+	}
+	return (counter);
+}
+
+char	*ft_itoa(int n)
+{
+	int		counter;
+	char	*str;
+
+	if (n == -2147483648 || n == 0)
+		return (check_first(n));
+	counter = ft_counter(n);
+	str = (char *)ft_calloc((counter + 1), sizeof(char));
+	if (!str)
+		return (NULL);
+	if (n < 0)
+	{
+		str[0] = '-';
+		n *= (-1);
+	}
+	while (--counter >= 0 && str[counter] != '-')
+	{
+		str[counter] = (n % 10) + 48;
+		n /= 10;
+	}
+	return (str);
 }

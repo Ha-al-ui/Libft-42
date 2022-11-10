@@ -9,19 +9,16 @@
 /*   Updated: 2022/10/13 11:49:45 by halaoui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+static char	*f_are_same(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
 	size_t	n;
 
 	i = 0;
 	n = 0;
-	if (len == 0)
-		return ((char *)haystack);
-	if (needle[i] == '\0')
-		return ((char *)haystack);
 	while (haystack[i] != '\0')
 	{
 		while (haystack[i + n] == needle[n] || needle[n] == '\0')
@@ -36,4 +33,18 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		i++;
 	}
 	return (0);
+}
+
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+{
+	size_t	l_h;
+
+	if (!haystack && len == 0)
+		return (NULL);
+	l_h = ft_strlen(haystack);
+	if (ft_strlen(needle) > len)
+		return (NULL);
+	if (needle[0] == '\0')
+		return ((char *)haystack);
+	return (f_are_same(haystack, needle, len));
 }

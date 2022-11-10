@@ -16,6 +16,8 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void		*p;
 
+	if (size > SIZE_MAX / count && size)
+		return (NULL);
 	p = malloc(count * size);
 	if (p == 0)
 		return (0);
@@ -24,12 +26,5 @@ void	*ft_calloc(size_t count, size_t size)
 }
 // int main()
 // {
-// 	char *p = ft_calloc(5,5);
-// 	int i;
-// 	i = 0;
-// 	while(i < 5)
-// 	{
-// 		printf("%d\n",p[i]);
-// 		i++;
-// 	}
+// 	printf("%s",calloc(18446744073709551615,18446744073709551615));
 // }
