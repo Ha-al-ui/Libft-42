@@ -50,7 +50,7 @@ static char	**split_m(const char *s, char c)
 	i = 0;
 	p = malloc(sizeof(char *) * (car_coun(s, c) + 1));
 	if (!p)
-		return (0);
+		return (NULL);
 	while (*s)
 	{
 		if (*s != c)
@@ -60,15 +60,12 @@ static char	**split_m(const char *s, char c)
 				++s;
 			p[i++] = ft_substr(s - len, 0, len);
 			if (!p)
-			{
 				ft_free(p);
-				return (NULL);
-			}
 		}
 		else
 			s++;
 	}
-	p[i] = '\0';
+	p[i] = NULL;
 	return (p);
 }
 
