@@ -6,7 +6,7 @@
 /*   By: halaoui <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 12:51:43 by halaoui           #+#    #+#             */
-/*   Updated: 2022/10/29 12:52:12 by halaoui          ###   ########.fr       */
+/*   Updated: 2022/11/17 22:03:33 by halaoui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static char	*check_first(int n)
 	return (NULL);
 }
 
-static int	ft_counter(int n)
+static int	ft_intlen(int n)
 {
 	int	counter;
 
@@ -46,7 +46,7 @@ char	*ft_itoa(int n)
 
 	if (n == -2147483648 || n == 0)
 		return (check_first(n));
-	counter = ft_counter(n);
+	counter = ft_intlen(n);
 	str = (char *)ft_calloc((counter + 1), sizeof(char));
 	if (!str)
 		return (NULL);
@@ -62,3 +62,7 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
+// int main()
+// {
+//     printf("%s",ft_itoa(2147483649));
+// }

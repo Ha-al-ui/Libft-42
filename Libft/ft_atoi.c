@@ -20,25 +20,25 @@ static int	white_spaces(const char *s, size_t i)
 
 int	ft_atoi(const char *str)
 {
-	int				c;
+	int				i;
 	int				s;
 	unsigned long	res;
 
-	c = 0;
+	i = 0;
 	s = 1;
 	res = 0;
-	while (white_spaces(str, c))
-		c++;
-	if (str[c] == '-' || str[c] == '+')
+	while (white_spaces(str, i))
+		i++;
+	if (str[i] == '-' || str[i] == '+')
 	{
-		if (str[c] == '-')
+		if (str[i] == '-')
 			s = -1;
-		c++;
+		i++;
 	}
-	while (str[c] >= '0' && str[c] <= '9')
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		res = (res * 10) + (str[c] - '0');
-		c++;
+		res = (res * 10) + (str[i] - '0');
+		i++;
 		if (res > 9223372036854775807ull && s == 1)
 			return (-1);
 		if (res > 9223372036854775807ull)
@@ -46,3 +46,8 @@ int	ft_atoi(const char *str)
 	}
 	return (res * s);
 }
+// int main()
+// {
+// 	char s[] = " +54654";
+// 	printf("%d", ft_atoi(s));
+// }

@@ -14,25 +14,27 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t		i;
-	const char	*ps;
-	unsigned char		pc;
+	unsigned char	*a;
 
-	i = 0;
-	ps = s;
-	pc = c;
-	while (i < n)
+	a = (unsigned char *)s;
+	while (n)
 	{
-		if (ps[i] == pc)
-			return ((void *)s + i);
-		i++;
+		if (*a == (unsigned char)c)
+			return (a);
+		a++;
+		n--;
 	}
-	return (0);
+	return (NULL);
 }
-int main()
-{
-	int i[] = {1,3,6};
-	int c = 3;
-	printf("%p\n",ft_memchr((char*)i + 4 ,c,2));
-	// printf("%ld",0x7ffee7e3e7f0);
-}
+// int main()
+// {
+// 	char i[] = {1,3,6,67,9,90,88};
+// 	int c = 9;
+// 	void *p = ft_memchr(i,c,5);
+// 	printf("%d",*(char *)p);
+// }
+// int main()
+// {
+// 	char s [] = "asljha";
+// 	printf("%s", ft_memchr(s, 'l', ));
+// }

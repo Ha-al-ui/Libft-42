@@ -32,3 +32,7 @@ char	*ft_strdup(const char *s1)
 	s[i] = '\0';
 	return (s);
 }
+// int main()
+// {
+//     printf("%s",ft_strdup("jdskj"));
+// }

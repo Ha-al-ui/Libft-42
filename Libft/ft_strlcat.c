@@ -14,8 +14,8 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t i;
-	size_t j;
+	size_t	i;
+	size_t	j;
 
 	if (dstsize == 0)
 		return (ft_strlen(src));
@@ -38,5 +38,4 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 //     char src[897]= "abcd";
 //     printf("%lu\n",ft_strlcat(dest,src,-1));
 //      printf("%lu", strlcat(dest,src,99));
-
 // }

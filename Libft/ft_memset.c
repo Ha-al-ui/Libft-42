@@ -26,11 +26,13 @@ void	*ft_memset(void *b, int c, size_t len)
 // int main()
 // {
 // 	int i = 0;
-
-// 	ft_memset(&i,57, 1);
-
-// 	ft_memset((char *)&i+1,5, 1);
-
-// 	printf("%d",(char *)i[5]);
-
+// 	ft_memset(&i,136, 1);
+// 	ft_memset((char *)&i+1,19, 1);
+// 	printf("%d",(char *)i);
+// int main()
+// {
+// 	char str [] = "dsksfjh";
+// 	int c = 'k';
+// 	ft_memset(str, c, 5);
+// 	printf("%s", str);
 // }

@@ -12,13 +12,13 @@
 
 #include "libft.h"
 
-static int	count_words( const char *str, char c)
+static int	car_coun( const char *str, char c)
 {
 	int	counter;
-	int	index;
+	int	i;
 
 	counter = 0;
-	index = 0;
+	i = 0;
 	while (*str)
 	{
 		if (*str == c)
@@ -26,21 +26,29 @@ static int	count_words( const char *str, char c)
 			counter++;
 		}
 		str++;
-		index++;
+		i++;
 	}
-	return (index - counter);
+	return (i - counter);
 }
 
-char	**ft_split(const char *s, char c)
+static void	ft_free(char **p)
 {
-	char		**p;
-	size_t		i;
-	size_t		len;
+	int	i;
 
-	if (!s)
-		return (0);
 	i = 0;
-	p = malloc(sizeof(char *) * (count_words(s, c) + 1));
+	while (p[i])
+		free(p[i++]);
+	free(p);
+}
+
+static char	**split_m(const char *s, char c)
+{
+	char	**p;
+	size_t	i;
+	size_t	len;
+
+	i = 0;
+	p = malloc(sizeof(char *) * (car_coun(s, c) + 1));
 	if (!p)
 		return (0);
 	while (*s)
@@ -51,10 +59,38 @@ char	**ft_split(const char *s, char c)
 			while (*s && *s != c && ++len)
 				++s;
 			p[i++] = ft_substr(s - len, 0, len);
+			if (!p)
+			{
+				ft_free(p);
+				return (NULL);
+			}
 		}
 		else
 			s++;
 	}
-	p[i] = 0;
+	p[i] = '\0';
 	return (p);
 }
+
+char	**ft_split(char const *s, char c)
+{
+	char		**p;
+
+	if (!s)
+		return (0);
+	p = split_m(s, c);
+	if (!p)
+		return (NULL);
+	return (p);
+}
+// int main()
+// {
+// 	char *s = "##hgdhd#ghdghgdg #hghjytu###";
+// 	char **split = ft_split(s,'g');
+// 	int i = 0;
+// 	while (split[i])
+// 	{
+// 		printf("%s\n",split[i]);
+// 		i++;
+// 	}
+// }

@@ -69,9 +69,9 @@ NAME			= libft.a
 all:			$(NAME)
 
 $(NAME):		$(OBJS)
-				ar rcs $(NAME) $(OBJS)
+				ar rcs  $(NAME) $(OBJS)
 %o: %c libft.h
-	$(CC) $(CFLAGS) -c $< -o $@ 
+	$(CC) $(CFLAGS) -c $< 
 
 
 clean:
