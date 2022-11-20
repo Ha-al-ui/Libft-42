@@ -29,10 +29,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-// int main()
-// {
-//     char h[] ="hay";
-//     char hh[] ="jam";
-//     printf("%d\n",ft_strncmp(h,hh,0));
-//     printf("%d",strncmp(h, hh, 0));
-// }

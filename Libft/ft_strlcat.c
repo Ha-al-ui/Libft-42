@@ -32,10 +32,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[i] = '\0';
 	return (ft_strlen(dst) + ft_strlen(&src[j]));
 }
-// int main()
-// {
-//     char dest[] =  "hamza";
-//     char src[897]= "abcd";
-//     printf("%lu\n",ft_strlcat(dest,src,-1));
-//      printf("%lu", strlcat(dest,src,99));
-// }

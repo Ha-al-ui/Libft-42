@@ -37,12 +37,14 @@ static char	*f_are_same(const char *haystack, const char *needle, size_t len)
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
+	size_t	l_n;
 	size_t	l_h;
 
 	if (!haystack && len == 0)
 		return (NULL);
 	l_h = ft_strlen(haystack);
-	if (ft_strlen(needle) > len)
+	l_n = ft_strlen(needle);
+	if (l_n > len)
 		return (NULL);
 	if (needle[0] == '\0')
 		return ((char *)haystack);

@@ -6,29 +6,37 @@
 /*   By: halaoui <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 12:50:37 by halaoui           #+#    #+#             */
-/*   Updated: 2022/11/04 01:34:05 by halaoui          ###   ########.fr       */
+/*   Updated: 2022/11/20 04:47:08 by halaoui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	car_coun( const char *str, char c)
+static int	car_coun( const char *s, char c)
 {
-	int	counter;
 	int	i;
+	int	coun;
 
-	counter = 0;
 	i = 0;
-	while (*str)
-	{
-		if (*str == c)
-		{
-			counter++;
-		}
-		str++;
+	coun = 0;
+	if (ft_strlen(s) == 0)
+		return (0);
+	while (s[i] == c)
 		i++;
+	while (s[i])
+	{
+		if (s[i] == c)
+		{
+			coun++;
+			while (s[i] == c)
+				i++;
+		}
+		else
+			i++;
 	}
-	return (i - counter);
+	if (s[i - 1] != c)
+		coun++;
+	return (coun);
 }
 
 static void	ft_free(char **p)
@@ -57,7 +65,7 @@ static char	**split_m(const char *s, char c)
 		{
 			len = 0;
 			while (*s && *s != c && ++len)
-				++s;
+				s++;
 			p[i++] = ft_substr(s - len, 0, len);
 			if (!p)
 				ft_free(p);
@@ -80,14 +88,3 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (p);
 }
-// int main()
-// {
-// 	char *s = "##hgdhd#ghdghgdg #hghjytu###";
-// 	char **split = ft_split(s,'g');
-// 	int i = 0;
-// 	while (split[i])
-// 	{
-// 		printf("%s\n",split[i]);
-// 		i++;
-// 	}
-// }

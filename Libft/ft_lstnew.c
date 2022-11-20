@@ -23,11 +23,3 @@ t_list	*ft_lstnew(void *content)
 	node->next = NULL;
 	return (node);
 }
-// int main()
-// {
-// 	t_list *node;
-// 	node = ft_lstnew("houssex");
-// 	node->next = ft_lstnew("fuck you");
-// 	printf("%p\n", node);
-// 	printf("%p", node->next);
-// }

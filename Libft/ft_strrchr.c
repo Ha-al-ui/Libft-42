@@ -29,8 +29,3 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)s);
 	return (0);
 }
-// int main()
-// {
-// 	char s[]= "maxpaytnflkrc";
-// 	printf("%s", ft_strrchr(s, 't'));
-// }

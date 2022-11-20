@@ -22,20 +22,3 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		lst = lst->next;
 	}
 }
-// void f(void *s)
-// {
-// 	char *p = s;
-// 	int i = 0;
-// 	while (p[i])
-// 	{
-// 		p[i] -= 32;
-// 		i++;
-// 	}	
-// }
-// int main()
-// {
-// 	t_list *node;
-// 	node = ft_lstnew(ft_strdup(""));
-// 	ft_lstiter(node, &f);
-// 	printf("%s", node->content);
-// }

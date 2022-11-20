@@ -28,17 +28,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		}
 	}
 }
-// void f(unsigned int i , char *s)
-// {
-//    while(*s)
-//    {
-//     s = s - 32;
-//     s++; 
-//    }
-// }
-// int main()
-// {
-//     char *p = "hossine";
-//     ft_striteri(p,&f);
-//     printf("%s",p);
-// }

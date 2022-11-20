@@ -35,15 +35,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-// int main()
-// {
-// 	int n = 1;
-// 	 printf("%s\n",memcpy("abc",n,3));
-// 	/*char  dst[88] = "p";
-// 	char src[88] = "hello";*/
-// 	printf("%s", memcpy("abc",n,1));
-// }
-// int main()
-// {
-// 	printf("%s", ft_memcpy("hello", "hamza", 5));
-// }

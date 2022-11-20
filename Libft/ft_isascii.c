@@ -18,8 +18,3 @@ int	ft_isascii(int c)
 		return (1);
 	return (0);
 }
-// int main()
-// {
-// 	int c = 'A';
-// 	printf("%d", ft_isascii(c));
-// }

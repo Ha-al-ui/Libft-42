@@ -30,10 +30,3 @@ size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
 	}
 	return (l);
 }
-// int main()
-// {
-// 	char src[] = "hamza";
-// 	char dest[] = "hosiine";
-// 	 printf("%zu\n", ft_strlcpy(dest,src,5));
-// 	 printf("%s", dest);
-// }

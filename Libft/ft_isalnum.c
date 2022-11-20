@@ -18,8 +18,3 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
-// int main()
-// {
-// 	int c = '5';
-// 	printf("%d", ft_isalnum(c));
-// }

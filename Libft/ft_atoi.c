@@ -46,8 +46,3 @@ int	ft_atoi(const char *str)
 	}
 	return (res * s);
 }
-// int main()
-// {
-// 	char s[] = " +54654";
-// 	printf("%d", ft_atoi(s));
-// }
