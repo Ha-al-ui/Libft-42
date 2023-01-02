@@ -1,5 +1,5 @@
 # 42cursus - Libft
-<a href="https://github.com/augustobecker/Libft" target="_blank"> <img align="center" alt="Libft" src="https://user-images.githubusercontent.com/81205527/149165832-9344c9e5-6075-4268-b276-26b60efc5733.png"> </a>
+<img align="center" alt="Libft" src="https://user-images.githubusercontent.com/81205527/149165832-9344c9e5-6075-4268-b276-26b60efc5733.png"> 
 My own library of useful C Programming functions.
 
 _Description :_ 
