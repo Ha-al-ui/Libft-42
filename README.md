@@ -1,4 +1,4 @@
-<h2  align="center" id="author">Libft</h2>
+<h2  align="center" id="author" height="60">Libft</h2>
 <div align="center">
 	<div>
 <img align="center" src="https://user-images.githubusercontent.com/81205527/149165832-9344c9e5-6075-4268-b276-26b60efc5733.png"> 
