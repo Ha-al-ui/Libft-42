@@ -188,15 +188,15 @@ Bonus functions to implement
 	<img height="222em" src="https://scontent.fcmn3-2.fna.fbcdn.net/v/t39.30808-6/320692326_1892362827767762_7273844557738942201_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeHZMBiTucubNV-0AS9O7g6r22GWHMX7eNLbYZYcxft40sPBR3hLv6evjRF4wNbrESlXK-jQwtVk0ofrElw07Q1G&_nc_ohc=SxWbqMS-aJwAX-k8B3i&_nc_ht=scontent.fcmn3-2.fna&oh=00_AfDRAOPDcKHmzQHN3J1p7vY2xid99E-wlCLskXC1MIBCWg&oe=63B81B8A">
 	</div>
 	<div>
-		<strong> Hamza Alaoui | 👨‍🚀</strong>
+		<strong> Hamza Alaoui | Devlopper web | 👨‍🚀</strong>
 	
 :wave: How to reach me:
     	</div> 
     	<div>
   	<a href=""><img align="center" alt="LinkedIn" height="60" src="https://user-images.githubusercontent.com/81205527/157161849-01a9df02-bf32-45be-add4-122bc40b48cf.png"></a>
 	<a href="https://www.instagram.com/hamza97.alaoui/"><img align="center" alt="Instagram" height="60" src="https://user-images.githubusercontent.com/81205527/157161841-19ec3ab2-2c8f-4ec0-8b9d-3cd885256098.png"></a>
-	<a href = "hamome97@gmail.com"> <img align="center" alt="Gmail - augustobecker.dev@gmail.com" height="60" src="https://user-images.githubusercontent.com/81205527/157161831-eb9dffee-404b-4ffe-b0af-34671219f7fb.png"></a>
-	<a href="895610829108568084"><img align="center" alt="Discord - beckerzz#3614" height="60" src="https://user-images.githubusercontent.com/81205527/157161820-de88dc63-61a3-4c9f-9445-07ac98bf0bc2.png"></a>
+	<a href = ""> <img align="center" alt="Gmail - augustobecker.dev@gmail.com" height="60" src="https://user-images.githubusercontent.com/81205527/157161831-eb9dffee-404b-4ffe-b0af-34671219f7fb.png"></a>
+	<a href=""><img align="center" alt="Discord - beckerzz#3614" height="60" src="https://user-images.githubusercontent.com/81205527/157161820-de88dc63-61a3-4c9f-9445-07ac98bf0bc2.png"></a>
 	</div>
 </div>
 
