@@ -190,7 +190,7 @@ Bonus functions to implement
  <h2  align="center" id="author">Author</h2>
 <div align="center">
 	<div>
-	<img height="222em" src="https://scontent.fcmn3-2.fna.fbcdn.net/v/t39.30808-6/320692326_1892362827767762_7273844557738942201_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeHZMBiTucubNV-0AS9O7g6r22GWHMX7eNLbYZYcxft40sPBR3hLv6evjRF4wNbrESlXK-jQwtVk0ofrElw07Q1G&_nc_ohc=SxWbqMS-aJwAX-k8B3i&_nc_ht=scontent.fcmn3-2.fna&oh=00_AfDRAOPDcKHmzQHN3J1p7vY2xid99E-wlCLskXC1MIBCWg&oe=63B81B8A">
+	<img height="150em" src="https://scontent.fcmn3-2.fna.fbcdn.net/v/t39.30808-6/320692326_1892362827767762_7273844557738942201_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeHZMBiTucubNV-0AS9O7g6r22GWHMX7eNLbYZYcxft40sPBR3hLv6evjRF4wNbrESlXK-jQwtVk0ofrElw07Q1G&_nc_ohc=SxWbqMS-aJwAX-k8B3i&_nc_ht=scontent.fcmn3-2.fna&oh=00_AfDRAOPDcKHmzQHN3J1p7vY2xid99E-wlCLskXC1MIBCWg&oe=63B81B8A">
 	</div>
 	<div>
 		<strong> Hamza Alaoui | Devlopper web | 👨‍🚀</strong>
